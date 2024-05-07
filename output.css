@@ -714,7 +714,7 @@ video {
 }
 
 .bg-initial {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/bg-initial.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/bg-initial.jpg');
 }
 
 .from-gray-900 {
