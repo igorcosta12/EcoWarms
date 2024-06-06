@@ -2,23 +2,18 @@
 session_start();
 include 'db.php';
 
-// Verificar se o usuário está logado
 if (!isset($_SESSION['isLoggedIn']) || !$_SESSION['isLoggedIn']) {
-    // Se não estiver logado, redirecionar para a página de login
     header("Location: login.php");
     exit();
 }
 
-// Verificar se as variáveis POST foram definidas
 if(isset($_POST['new_password'])) {
     $new_password = password_hash($_POST['new_password'], PASSWORD_DEFAULT);
     $username = $_SESSION['username'];
 
-    // Atualizar a senha no banco de dados
     $stmt = $db->prepare("UPDATE users SET password = :password WHERE username = :username");
     $stmt->execute(array(':password' => $new_password, ':username' => $username));
 
-    // Mensagem de sucesso
     $_SESSION['changePasswordMessage'] = "Senha alterada com sucesso!";
     header("Location: index.html");
     exit();
@@ -45,7 +40,7 @@ if(isset($_POST['new_password'])) {
             background-attachment: fixed;
             height: 100vh;
             display: flex;
-            align-items: flex-start; /* Alteração feita aqui */
+            align-items: flex-start; 
             justify-content: center;
     }
         .container {
@@ -137,10 +132,9 @@ if(isset($_POST['new_password'])) {
             <button type="submit">Alterar Senha</button>
         </form>
         <?php
-        // Exibir mensagem de sucesso, se houver
         if (isset($_SESSION['changePasswordMessage'])) {
             echo "<p>{$_SESSION['changePasswordMessage']}</p>";
-            unset($_SESSION['changePasswordMessage']); // Limpar a mensagem da sessão
+            unset($_SESSION['changePasswordMessage']); 
         }
         ?>
     </div>

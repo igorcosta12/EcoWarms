@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$dbname = 'ecowarms';
-$username = 'root'; // Pode variar dependendo da sua configuração local
-$password = ''; // Deixe em branco se você não definiu uma senha
+$dbname = 'id22111577_igor';
+$username = 'id22111577_igor'; 
+$password = 'Ecowarms1221@';
 
 try {
     $db = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);

@@ -40,7 +40,7 @@
                         </div>
                         <img id="weatherImg" class="block object-contain max-h-32 w-full" src="" alt="">
                         
-                        <p id="temperature" class="text-center text-5xl"><span>30</span>&deg;C</p>
+                        <p id="temperature" class="text-center text-5xl"><span></span>&deg;C</p>
 
                         
                         <div class="flex items-center gap-1 justify-center font-logo text-2xl">
@@ -56,16 +56,16 @@
 
                         <div class="flex justify-around pt-10">
                             <div class="flex text-center">
-                                <img class="max-h-10" src="./assets/humidade.svg" alt="">
+                                <img class="max-h-10" src="../assets/humidade.svg" alt="">
                             
                                 <div>
                                     <p id="humidity" class="text-3xl"><span></span></p>
-                                    <p class="text-xs">Umidade</p>
+                                    <p class="text-xs">Humidade</p>
                                 </div>
                             </div>
 
                             <div class="flex text-center">
-                                <img class="max-h-10" src="./assets/wind.svg" alt="">
+                                <img class="max-h-10" src="../assets/wind.svg" alt="">
                                 
                                 <div>
                                     <p id="wind" class="text-3xl"><span></span></p>
@@ -79,7 +79,7 @@
 
             <nav>
                 <ul class="flex items-center gap-6">
-                    <li class="relative font-links text-2xl">
+                    <li class="relative font-links text-xl">
                         <button class="text-white flex font-links items-center" id="dropDown">
                             Seções 
                             
@@ -95,10 +95,10 @@
                         </div>
                     </li>
                     
-                    <li class="relative text-2xl font-links">
+                    <li class="relative text-xl font-links">
                         <button class="text-white flex items-center" id="dropDown">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-1">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/>
                               </svg>
                               
 
@@ -109,18 +109,17 @@
                             </svg>
                         </button>
 
-                        <div class="absolute w-full hidden bg- text-white text-lg py-2" id="menuDrop">
+                        <div class="absolute w-full hidden bg- text-white text-lg py-2">
                             <a class="w-full block text-center text-lg text-white py-1 rounded hover:bg-gray-900 duration-200" href="#">en-US</a>
                             <a class="w-full block text-center text-lg text-white py-1 rounded hover:bg-gray-900  duration-200" href="#">es-ES</a>
                         </div>
                     </li>
-                    
-                    <a href="login.php" class="btnPrimary text-white text-lg rounded-lg duration-200 hover:bg-black">Login</a>
 
-                    
+                    <li class="font-links">
+                        <a href="login.php"><button class="btnPrimary text-white text-lg rounded-lg duration-200 hover:bg-black">Login</button></a>
+                    </li>
                 </ul>
             </nav>
-            
         </header>
 
         <div class="flex text-white items-center flex-col pt-32 text-center">
@@ -129,10 +128,171 @@
         </div>
     </div>
     
-    <div class="h-96">
-        ads
+    <div class="text-white py-10">
+        <h2 id="vital" class="px-20 font-texto font-texto-regular text-4xl">Dados Vitais</h2>
+
+        <section id="sect" class="pt-3 flex justify-center mx-auto">
+            <button id="prev" class="mt-12 mr-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>                  
+            </button>
+
+            <div class="carrossel flex overflow-x-hidden py-4">
+                <div class="carrossel-card mt-12 border-t-2 border-gray-400 font-texto">
+                    <h3 class="text-xl pt-4">Temperatura Global</h3>
+
+                    <div class="flex items-center w-60 pt-2"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-red-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
+                        </svg>
+                       
+                        <p class="text-4xl font-white">1.4</p>
+                        <span class=" after:content-['°'] after:ml-2 block text-4xl text-gray-500"></span> 
+                    </div>                      
+                </div>
+
+                <div class="carrossel-card ml-12 pr-12 mt-12 border-t-2 border-gray-400 font-texto">
+                    <h3 class="text-xl pt-4">Dióxido de Carbono (CO2)</h3>
+
+                    <div class="flex flex-wrap w-60 pt-2"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-red-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
+                        </svg>
+                       
+                        <p class="text-4xl font-white">425</p>
+                        <span class="pl-2 block text-xs text-gray-500 relative">
+                            partes por milhão
+                            <span class="absolute ml-2" style="content: '\\00a0'"></span>
+                        </span>
+                        
+                    </div>                      
+                </div>
+
+                <div class="carrossel-card ml-12 pr-12 mt-12 border-t-2 border-gray-400 font-texto">
+                    <h3 class="text-xl pt-4">Nível do mar</h3>
+
+                    <div class="flex flex-wrap w-60 pt-2"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-red-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
+                        </svg>
+                       
+                        <p class="text-4xl font-white">4</p>
+                        <span class="pl-2 block text-xs text-gray-500 relative">
+                            polegadas desde janeiro <br> de 1963
+                            <span class="absolute ml-2" style="content: '\\00a0'""></span>
+                        </span>
+                    </div>                      
+                </div>
+
+                <div class="carrossel-card ml-12 pr-12 mt-12 border-t-2 border-gray-400 font-texto">
+                    <h3 class="text-xl pt-4">Metano</h3>
+
+                    <div class="flex flex-wrap w-52 pt-2"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-red-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
+                        </svg>
+                       
+                        <p class="text-4xl font-white">1932</p>
+                        <span class="pl-2 block text-xs text-gray-500 relative">
+                            partes por <br>bilhão
+                            <span class="absolute ml-2" style="content: '\\00a0'""></span>
+                        </span>
+                    </div>                      
+                </div>
+
+                <div class="carrossel-card ml-12 pr-12 mt-12 border-t-2 border-gray-400 font-texto">
+                    <h3 class="text-xl pt-4">Mantos de gelo</h3>
+
+                    <div class="flex flex-wrap w-60 pt-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-red-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
+                          </svg>
+                       
+                        <p class="text-4xl font-white">424</p>
+                        <span class="pl-2 block text-xs text-gray-500 relative">
+                            bilhões de toneladas<br> métricas por ano
+                            <span class="absolute ml-2" style="content: '\\00a0'""></span>
+                        </span>
+                    </div>                      
+                </div>
+
+                <div class="carrossel-card ml-12 pr-12 mt-12 border-t-2 border-gray-400 font-texto">
+                    <h3 class="text-xl pt-4">Aquecimento do oceano</h3>
+
+                    <div class="flex flex-wrap w-52 pt-2"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-red-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
+                        </svg>
+                       
+                        <p class="text-4xl font-white">360</p>
+                        <span class="pl-2 block text-xs text-gray-500 relative">
+                            zettajoules<br> desde 1955
+                            <span class="absolute ml-2" style="content: '\\00a0'""></span>
+                        </span>
+                    </div>                      
+                </div>
+            </div>
+
+            <button id="next" class="pl-6 mt-12">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>                                      
+            </button>
+        </section>     
     </div>
 
-    <script src="./js/app.js"></script>
+    <div class="py-10 bg-gray-100">
+        <div class="px-20">
+            <nav class="pt-14 pb-10">
+                <ul class="flex gap-7">
+                    <li id="qstW" class="link-nav ativo text-xl font-links font-bold">O que é</li>
+                    <li id="impact" class="link-nav text-xl font-links font-bold">Impactos</li>
+                    <li id="causes" class="link-nav text-xl font-links font-bold">Causas</li>
+                </ul>
+            </nav>
+
+            <article id="qstW-article" class="font-texto grid grid-cols-2 gap-10 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold pb-3">O que são mudanças climáticas?</h2>
+
+                    <span class="font-bold">As mudanças climáticas referem-se a variações significativas e duradouras nos padrões de clima global e regional.</span>
+
+                    <p class="pt-3 text-indent-1em">Mudanças climáticas referem-se a alterações no clima causadas por processos naturais ou atividades humanas. Recentemente, o termo está ligado ao aquecimento global, o aumento contínuo das temperaturas médias da Terra.</p>
+                    <p class="pt-1 text-indent-1em pb-10">O aquecimento global está ligado ao efeito estufa, onde gases na atmosfera, como CO2 e metano, retêm calor irradiado pela Terra. Esse fenômeno é essencial para a vida, mas atividades humanas, como a queima de combustíveis fósseis e o desmatamento, aumentam a concentração desses gases, intensificando o efeito estufa e o aquecimento global.</p>
+                    <a href="#" class="btnTerciary">Ler mais</a>
+                </div>
+                <img src="../assets/qstW-img.jpg" alt="" class="rounded-2xl">
+            </article>
+
+            <article id="impact-article" class="hidden font-texto grid grid-cols-2 gap-10 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold pb-3">Os Impactos das mudanças climáticas</h2>
+
+                    <span class="font-bold">Os impactos das mudanças climáticas são as consequências significativas das alterações nos padrões de clima global e regional.</span>
+
+                    <p class="pt-3 text-indent-1em">Mudanças climáticas resultam em alterações no clima causadas por processos naturais ou atividades humanas, ligadas ao aquecimento global. Esse aquecimento provoca impactos significativos, como derretimento das calotas polares, elevação do nível do mar e eventos climáticos extremos, como furacões e secas.</p>
+                    <p class="pt-1 text-indent-1em pb-10">A acidificação dos oceanos, perda de biodiversidade e impactos na agricultura e saúde humana são também consequências graves. Atividades humanas intensificam esses efeitos, exigindo ações urgentes para mitigação e adaptação.</p>
+                    <a href="#" class="btnTerciary">Ler mais</a>
+                </div>
+                <img src="../assets/impact-img.jpg" alt="" class="rounded-2xl">
+            </article>
+
+            <article id="causes-article" class="hidden font-texto grid grid-cols-2 gap-10 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold pb-3">O que está causando as mudanças climáticas?</h2>
+
+                    <span class="font-bold">As atividades humanas estão a impulsionar a tendência de aquecimento global observada desde meados do século XX.</span>
+
+                    <p class="pt-3 text-indent-1em">Os cientistas atribuem a tendência de aquecimento global observada desde meados do século XX à expansão humana do “efeito estufa” – aquecimento que resulta quando a atmosfera retém o calor que irradia da Terra para o espaço.</p>
+                    <p class="pt-1 text-indent-1em pb-10">Ao longo do último século, a queima de combustíveis fósseis como carvão e petróleo aumentou a concentração de dióxido de carbono (CO2) atmosférico. Esse aumento acontece porque o processo de queima de carvão ou óleo combina carbono com oxigênio do ar para produzir CO2.</p>
+                    <a href="#" class="btnTerciary">Ler mais</a>
+                </div>
+                <img class="rounded-2xl" src="../assets/causes-img.jpg" alt="">
+            </article>
+        </div>
+    </div>
+
+    <script type="module" src="../js/app.js"></script>
 </body> 
 </html>

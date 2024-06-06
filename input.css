@@ -1,10 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
     background: #000;
     color: #111;
-}
-
-.bg-initial img {
-    opacity: .3 ;
 }
 
 .btnPrimary {
@@ -14,4 +14,143 @@ body {
 
 .modal-open {
     overflow: hidden;
+}
+
+#vital::after {
+    content: "";
+    display: block;
+    width: 170px;
+    height: 2px;
+    background-color: #fff;
+}
+
+#sect {
+    width: 1000px;
+}
+
+.carrossel-card {
+    flex: 0 0 auto;
+    position: relative;
+}
+
+.carrossel-card::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px; 
+    background-color: #fff;
+    transition: 0.3s ease-in-out; 
+}
+
+.carrossel-card:hover::before {
+    width: 100%; 
+}
+
+#login-page {
+    background-color: #eee;
+}
+
+.login, .register {
+    max-width: 500px;
+    animation: animateLogin 1s;
+}
+
+.login input:focus,
+.register input:focus {
+    background-color: #273c58;
+    border: 1px solid #d8d8d8;
+}
+
+#qstPass {
+    transition: .3s;
+}
+
+#qstPass:hover {
+    color: #fff;
+}
+
+.btnSecondary {
+    border: 2px solid rgb(31 41 55 / var(--tw-bg-opacity));
+    background-color: transparent;
+    width: 150px;
+    padding: 8px 20px;
+    border-radius: 10px;
+    transition: .3s;
+    font-weight: 600;
+}
+
+.btnSecondary:hover {
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+    color: #fff;
+}
+
+.btnTerciary {
+    border: 2px solid #111;
+    background-color: transparent;
+    padding: 10px 50px;
+    border-radius: 15px;
+    transition: .3s;
+    font-weight: 600;
+}
+
+.btnTerciary:hover {
+    background-color: #111;
+    color: #fff;
+}
+
+#link-register:hover,
+#link-login:hover {
+    text-decoration: underline;
+}
+
+.link-nav {
+    cursor: pointer;
+}
+
+.link-nav.ativo::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    display: block;
+    background-color: #000;
+    margin-top: 5px;
+    animation: animateOpacity .3s;
+}
+
+article {
+    animation: animateArticle .5s;
+}
+
+@keyframes animateArticle {
+    from {
+        opacity: 0;
+        transform: translate3d(-1000px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes animateLogin {
+    from {
+        opacity: 0;
+        transform: translate3d(-100px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes animateOpacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
